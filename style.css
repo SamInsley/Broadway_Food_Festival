@@ -183,3 +183,11 @@ p{ margin: 0 0 12px; }
   border-radius: 12px;
   margin-bottom: 12px;
 }
+
+/* Mobile: keep faces in frame */
+@media (max-width: 520px){
+  #team img.team-photo{
+    height: 220px;              /* slightly shorter helps too */
+    object-position: 50% 20%;   /* center horizontally, lower crop (shows more top) */
+  }
+}
