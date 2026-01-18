@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Broadway Food Festival</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Broadway Food & Drink Festival</title>
+  <meta name="description" content="Broadway Food & Drink Festival — local food, drink, and a great day out." />
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Broadway Food Festival</a>
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/logo.png" alt="Broadway Food & Drink Festival logo" />
+      </a>
 
       <nav class="nav">
         <a class="active" href="index.html">Home</a>
@@ -20,60 +23,104 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <h1>Broadway Food Festival</h1>
-        <p class="lead">
-          Local food, great atmosphere, and a brilliant day out in Broadway.
-        </p>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Broadway Food &amp; Drink Festival</h1>
+          <p class="lead">
+            A celebration of local producers, great food, and a welcoming day out in Broadway.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Get in touch</a>
+            <a class="btn btn-ghost" href="#about">About the festival</a>
+          </div>
+        </div>
+
+        <div class="hero-mark">
+          <img class="hero-logo" src="images/logo.png" alt="" aria-hidden="true" />
+        </div>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container">
-        <h2>About</h2>
-        <p>
-          The Broadway Food Festival is an annual event that takes place on the village green in Broadway on the second Sunday in September. Artisan producers will be displaying their products with a wide variety of hot and cold food and drink available to purchase. There is also a marquee with a selection of demonstrations taking place throughout the day. It is run every year by a committee of volunteers with the current team pictured below.
-          The event is funded by Wychavon from the 'levelling up' grant.
-        </p>
-      </div>
-    </section>
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="muted">
+            The Broadway Food Festival is an annual event that takes place on the village green in Broadway on the second Sunday in September. Artisan producers will be displaying their products with a wide variety of hot and cold food and drink available to purchase. There is also a marquee with a selection of demonstrations taking place throughout the day. It is run every year by a committee of volunteers with the current team pictured below. The event is funded by Wychavon from the 'levelling up' grant.
+          </p>
+        </div>
 
-    <section class="section section-alt" id="team">
-      <div class="container">
-        <h2>Meet the Team</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Local Producers</h3>
+            <p class="muted">Showcase the best of local food and drink from the Cotswolds and beyond.</p>
+          </article>
 
-        <div class="team-grid">
-          <article class="team-card">
-            <img src="images/Phil.jpg" alt="Phil Insley" class="team-photo" />
-            <h3>Phil Insley</h3>
+          <article class="card">
+            <h3>Street Food</h3>
+            <p class="muted">A mix of flavours and great options throughout the day.</p>
           </article>
-        
-          <article class="team-card">
-            <img src="images/Jayne.jpg" alt="Jayne Insley" class="team-photo" />
-            <h3>Jayne Insley</h3>
-          </article>
-        
-          <article class="team-card">
-            <img src="images/Lesley.jpg" alt="Lesley Dingley" class="team-photo" />
-            <h3>Lesley Dingley</h3>
-          </article>
-        
-          <article class="team-card">
-            <img src="images/helen.jpg" alt="Helen Lee" class="team-photo" />
-            <h3>Helen Lee</h3>
+
+          <article class="card">
+            <h3>Community Day Out</h3>
+            <p class="muted">A relaxed atmosphere in the heart of Broadway.</p>
           </article>
         </div>
       </div>
     </section>
 
-        <p class="note">
-          Want to get involved? <a href="contact.html">Contact us</a>.
-        </p>
+    <!-- TEAM -->
+    <section class="section section-alt" id="team">
+      <div class="container">
+        <div class="section-head">
+          <h2>Meet the Team</h2>
+          <p class="muted">The people behind the festival.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <img src="images/Lesley.jpg" alt="Lesley Dingley" class="team-photo focus-top" />
+            <h3>Lesley Dingley</h3>
+            <p class="muted">Role / Title</p>
+          </article>
+
+          <article class="team-card">
+            <img src="images/Phil.jpg" alt="Phil Insley" class="team-photo" />
+            <h3>Phil Insley</h3>
+            <p class="muted">Role / Title</p>
+          </article>
+
+          <article class="team-card">
+            <img src="images/Jayne.jpg" alt="Jayne Insley" class="team-photo" />
+            <h3>Jayne Insley</h3>
+            <p class="muted">Role / Title</p>
+          </article>
+
+          <article class="team-card">
+            <img src="images/helen.jpg" alt="Helen Lee" class="team-photo" />
+            <h3>Helen Lee</h3>
+            <p class="muted">Role / Title</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p><strong>Want to get involved?</strong> Stallholders, sponsors, volunteers — we’d love to hear from you.</p>
+          <a class="btn btn-primary" href="contact.html">Contact us</a>
+        </div>
       </div>
     </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Broadway Food &amp; Drink Festival</p>
+      <p class="muted"><a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
