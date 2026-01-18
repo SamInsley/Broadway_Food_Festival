@@ -162,3 +162,10 @@ p{ margin: 0 0 12px; }
   border-radius: 10px;
   margin-bottom: 12px;
 }
+
+.team-photo {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover !important;
+  border: 3px solid red;
+}
