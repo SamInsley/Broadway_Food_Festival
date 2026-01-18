@@ -6,102 +6,78 @@
   <title>Broadway Food Festival</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <div class="brand">
-        <div class="logo">BFF</div>
-        <div>
-          <h1>Broadway Food Festival</h1>
-          <p class="tagline">Taste • Music • Community</p>
-        </div>
-      </div>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Broadway Food Festival</a>
 
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#whatson">What’s on</a>
-        <a href="#vendors">Vendors</a>
-        <a href="#visit">Visit</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="kicker">Broadway, Worcestershire</p>
-          <h2>Good food. Great people. One brilliant day.</h2>
-          <p class="lead">
-            Street food, local producers, drinks, and live entertainment — right in the heart of Broadway.
-          </p>
-          <div class="cta">
-            <a class="btn" href="#visit">Plan your visit</a>
-            <a class="btn btn-ghost" href="#vendors">See vendors</a>
-          </div>
-          <ul class="quick">
-            <li><strong>Date:</strong> TBC</li>
-            <li><strong>Time:</strong> TBC</li>
-            <li><strong>Location:</strong> Broadway village</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Updates</h3>
-          <p>Add announcements here (vendor applications, schedule, parking info).</p>
-          <p class="small">Tip: keep this box updated so the homepage always feels “current”.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="wrap">
-        <h3>About</h3>
-        <p>
-          Broadway Food Festival celebrates local flavour — independent traders, producers, and community groups.
+      <div class="container">
+        <h1>Broadway Food Festival</h1>
+        <p class="lead">
+          Local food, great atmosphere, and a brilliant day out in Broadway.
         </p>
       </div>
     </section>
 
-    <section id="whatson" class="section alt">
-      <div class="wrap">
-        <h3>What’s on</h3>
-        <div class="cards">
-          <div class="card"><h4>Street Food</h4><p>Hot food vendors + sweet treats.</p></div>
-          <div class="card"><h4>Local Producers</h4><p>Cheese, bakery, preserves, and more.</p></div>
-          <div class="card"><h4>Music & Family</h4><p>Live sets and family-friendly activities.</p></div>
-        </div>
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          Broadway Food Festival celebrates local producers, street food, and community.
+          Add your real details here: dates, location, what’s on, and who it’s for.
+        </p>
       </div>
     </section>
 
-    <section id="vendors" class="section">
-      <div class="wrap">
-        <h3>Vendors</h3>
-        <p>List confirmed vendors here. You can add logos later.</p>
-        <ul class="list">
-          <li>Vendor name — type of food/drink</li>
-          <li>Vendor name — type of food/drink</li>
-          <li>Vendor name — type of food/drink</li>
-        </ul>
-      </div>
-    </section>
+    <section class="section section-alt" id="team">
+      <div class="container">
+        <h2>Meet the Team</h2>
 
-    <section id="visit" class="section alt">
-      <div class="wrap">
-        <h3>Visit</h3>
-        <div class="cards">
-          <div class="card"><h4>Getting here</h4><p>Directions / nearest car parks.</p></div>
-          <div class="card"><h4>Accessibility</h4><p>Step-free routes, toilets, assistance.</p></div>
-          <div class="card"><h4>Contact</h4><p>Email + socials (add links).</p></div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="avatar">SI</div>
+            <h3>Name One</h3>
+            <p class="muted">Festival Coordinator</p>
+          </article>
+
+          <article class="team-card">
+            <div class="avatar">AB</div>
+            <h3>Name Two</h3>
+            <p class="muted">Stallholder Liaison</p>
+          </article>
+
+          <article class="team-card">
+            <div class="avatar">CD</div>
+            <h3>Name Three</h3>
+            <p class="muted">Marketing & Comms</p>
+          </article>
         </div>
+
+        <p class="note">
+          Want to get involved? <a href="contact.html">Contact us</a>.
+        </p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <p>© Broadway Food Festival</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Broadway Food Festival</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
