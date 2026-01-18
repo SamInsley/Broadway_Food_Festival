@@ -1,128 +1,244 @@
 :root{
-  --bg:#0b0f14;
-  --card:#121a23;
-  --alt:#0f1620;
-  --text:#e8eef6;
-  --muted:#a8b3c1;
-  --line:rgba(232,238,246,0.12);
-  --accent:#ffcc66;
+  /* From your logo */
+  --red:  #C0313B;
+  --plum: #552E43;
+
+  /* Neutrals */
+  --bg:   #fbfbfc;
+  --ink:  #1b1b1f;
+  --muted:#5a5a66;
+  --card: #ffffff;
+  --line: rgba(27,27,31,0.10);
+
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --radius: 18px;
 }
 
-*{ box-sizing:border-box; }
+*{ box-sizing: border-box; }
 html,body{ margin:0; padding:0; }
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--ink);
   line-height: 1.55;
 }
 
-a{ color: var(--accent); text-decoration:none; }
-a:hover{ text-decoration:underline; }
+a{ color: var(--plum); text-decoration: none; }
+a:hover{ text-decoration: underline; }
 
-.container{ max-width: 980px; margin: 0 auto; padding: 0 16px; }
+.container{
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
 
+/* Header */
 .site-header{
   position: sticky;
   top: 0;
-  background: rgba(11,15,20,0.88);
+  z-index: 10;
+  background: rgba(251,251,252,0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
-  z-index: 10;
 }
 
 .header-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 14px 0;
   gap: 16px;
+  padding: 12px 0;
 }
 
-.brand{
-  color: var(--text);
-  font-weight: 750;
-  letter-spacing: 0.2px;
+.brand{ display:flex; align-items:center; }
+.brand-logo{
+  height: 42px;
+  width: auto;
+  display:block;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 8px;
 }
 
 .nav a{
-  color: var(--text);
-  margin-left: 10px;
-  padding: 8px 10px;
-  border-radius: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: var(--ink);
   border: 1px solid transparent;
 }
 
 .nav a.active{
-  border-color: var(--line);
-  background: rgba(255,255,255,0.04);
+  border-color: rgba(85,46,67,0.25);
+  background: rgba(85,46,67,0.06);
+  color: var(--plum);
 }
 
+/* Hero */
 .hero{
-  padding: 56px 0 28px;
   border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(900px 500px at 20% 0%, rgba(192,49,59,0.10), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(85,46,67,0.10), transparent 60%);
 }
 
-.hero h1{
+.hero-inner{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  padding: 48px 0 34px;
+  align-items:center;
+}
+
+.hero-small .hero-inner{
+  grid-template-columns: 1fr;
+  padding: 42px 0 28px;
+}
+
+.hero-copy h1{
   margin: 0 0 10px;
-  font-size: 40px;
-  line-height: 1.1;
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--plum);
 }
 
 .lead{
   margin: 0;
-  color: var(--muted);
   font-size: 18px;
+  color: var(--muted);
   max-width: 60ch;
 }
 
+.hero-actions{
+  display:flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.hero-mark{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.hero-logo{
+  width: min(420px, 100%);
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.08));
+  border-radius: 14px;
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 650;
+  border: 1px solid transparent;
+}
+
+.btn-primary{
+  background: var(--red);
+  color: white;
+  box-shadow: 0 10px 24px rgba(192,49,59,0.22);
+}
+.btn-primary:hover{ text-decoration:none; }
+
+.btn-ghost{
+  background: white;
+  border-color: var(--line);
+  color: var(--plum);
+}
+.btn-ghost:hover{ text-decoration:none; }
+
+/* Sections */
 .section{ padding: 34px 0; }
 .section-alt{
-  background: var(--alt);
+  background: white;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-h2{ margin: 0 0 12px; font-size: 26px; }
+.section-head{
+  margin-bottom: 14px;
+}
+h2{
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: var(--plum);
+}
+h3{
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--ink);
+}
 p{ margin: 0 0 12px; }
 .muted{ color: var(--muted); }
 .small{ font-size: 14px; }
-.note{ margin-top: 18px; }
 
-#team .team-grid{
-  display: grid;
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Team */
+.team-grid{
+  display:grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
+  margin-top: 10px;
 }
 
-@media (max-width: 900px){
-  #team .team-grid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 520px){
-  #team .team-grid{ grid-template-columns: 1fr; }
+.team-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
-.avatar{
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-weight: 750;
-  background: rgba(255,204,102,0.14);
-  border: 1px solid rgba(255,204,102,0.25);
+.team-photo{
+  display:block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
   margin-bottom: 10px;
 }
 
+/* Crop controls (use on individual images if needed) */
+.focus-top{ object-position: 50% 15%; }
+.focus-center{ object-position: 50% 50%; }
+.focus-low{ object-position: 50% 35%; }
+
+/* Contact */
 .contact-card{
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 18px;
+  box-shadow: var(--shadow);
 }
 
 .contact-grid{
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 10px;
@@ -130,64 +246,58 @@ p{ margin: 0 0 12px; }
 
 .contact-item{
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 14px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(85,46,67,0.03);
 }
 
+.callout{
+  margin-top: 18px;
+  border: 1px solid rgba(192,49,59,0.20);
+  background: rgba(192,49,59,0.06);
+  border-radius: var(--radius);
+  padding: 14px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.callout-compact{
+  justify-content: flex-start;
+}
+
+/* Footer */
 .site-footer{
   border-top: 1px solid var(--line);
   padding: 18px 0;
-  color: var(--muted);
-  font-size: 14px;
 }
 
-@media (max-width: 800px){
-  .hero h1{ font-size: 32px; }
+.footer-inner{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .hero-mark{ justify-content: flex-start; }
+  .cards{ grid-template-columns: 1fr; }
+  .team-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px){
+  .hero-copy h1{ font-size: 32px; }
   .team-grid{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
-}
 
-@media (max-width: 860px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-}
-
-.team-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px;
-  overflow: hidden; /* IMPORTANT */
-}
-
-.team-photo {
-  display: block;
-  width: 100%;
-  height: 220px;          /* controls size */
-  object-fit: cover;     /* crop instead of stretch */
-  border-radius: 10px;
-  margin-bottom: 12px;
-}
-
-#team .team-card { 
-  overflow: hidden;
-}
-
-#team img.team-photo {
-  display: block;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 240px !important;   /* change this number if you want taller/shorter */
-  object-fit: cover !important;
-  border-radius: 12px;
-  margin-bottom: 12px;
-}
-
-/* Mobile: keep faces in frame */
-@media (max-width: 520px){
-  #team img.team-photo{
-    height: 220px;              /* slightly shorter helps too */
-    object-position: 50% 20%;   /* center horizontally, lower crop (shows more top) */
+  /* Mobile crop helper: keeps heads in frame more often */
+  .team-photo{
+    height: 220px;
+    object-position: 50% 20%;
   }
 }
