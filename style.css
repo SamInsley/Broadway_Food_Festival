@@ -89,10 +89,17 @@ p{ margin: 0 0 12px; }
 .small{ font-size: 14px; }
 .note{ margin-top: 18px; }
 
-.team-grid {
+#team .team-grid{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
+}
+
+@media (max-width: 900px){
+  #team .team-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  #team .team-grid{ grid-template-columns: 1fr; }
 }
 
 .avatar{
@@ -163,9 +170,16 @@ p{ margin: 0 0 12px; }
   margin-bottom: 12px;
 }
 
-.team-photo {
-  width: 100px !important;
-  height: 100px !important;
+#team .team-card { 
+  overflow: hidden;
+}
+
+#team img.team-photo {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 240px !important;   /* change this number if you want taller/shorter */
   object-fit: cover !important;
-  border: 3px solid red;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
