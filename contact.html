@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Broadway Food Festival</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Broadway Food Festival</a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="lead">Questions, sponsorship, stallholders — get in touch.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-card">
+          <h2>Get in touch</h2>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h3>Phone</h3>
+              <p><a href="tel:+441234567890">+44 1234 567890</a></p>
+            </div>
+
+            <div class="contact-item">
+              <h3>Email</h3>
+              <p><a href="mailto:hello@broadwayfoodfestival.co.uk">hello@broadwayfoodfestival.co.uk</a></p>
+            </div>
+          </div>
+
+          <p class="muted small">
+            Replace the phone number and email above with your real contact details.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Broadway Food Festival</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
