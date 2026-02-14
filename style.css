@@ -29,7 +29,8 @@ a:hover{ text-decoration: underline; }
 .container{
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding-left: calc(16px + env(safe-area-inset-left));
+  padding-right: calc(16px + env(safe-area-inset-right));
 }
 
 /* Header */
