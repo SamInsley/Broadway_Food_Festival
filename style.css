@@ -354,4 +354,9 @@ p{ margin: 0 0 12px; }
 
 @media (max-width: 980px){
   .stall-grid{ grid-template-columns: 1fr; }
+  .container{
+    padding-left: calc(20px + env(safe-area-inset-left));
+    padding-right: calc(20px + env(safe-area-inset-right));
+  }
 }
+  
