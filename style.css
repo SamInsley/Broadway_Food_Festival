@@ -21,6 +21,7 @@ body{
   background: var(--bg);
   color: var(--ink);
   line-height: 1.55;
+  overflow-x: hidden;
 }
 
 a{ color: var(--plum); text-decoration: none; }
@@ -416,7 +417,7 @@ p{ margin: 0 0 12px; }
 .featured-photo{
   display:block;
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
@@ -424,14 +425,17 @@ p{ margin: 0 0 12px; }
   display:flex;
   gap: 4px;
   padding: 4px;
+  min-width: 0;
 }
 
 .featured-thumb{
   display:block;
   width: 100%;
-  height: 56px;
+  height: 84px;
   object-fit: cover;
   border-radius: 8px;
+  min-width: 0;
+  flex: 1 1 0;
 }
 
 .featured-body{
