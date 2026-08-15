@@ -6,6 +6,46 @@
   <title>Stallholders — Broadway Food & Drink Festival</title>
   <meta name="description" content="Meet the stallholders coming to the Broadway Food & Drink Festival." />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Lightbox (inlined so it always works, even if style.css is cached) */
+    .featured-photo, .featured-thumb{ cursor: zoom-in; }
+
+    .lightbox{
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1000;
+      background: rgba(27,27,31,0.88);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .lightbox.open{ display: flex; }
+    .lightbox img{
+      max-width: min(900px, 92vw);
+      max-height: 86vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .lightbox-close{
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .lightbox-close:hover{ background: rgba(255,255,255,0.22); }
+  </style>
 </head>
 
 <body>
